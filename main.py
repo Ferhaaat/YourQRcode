@@ -35,10 +35,11 @@ download_button = st.empty()
 
 if os.path.exists("qrcode.png"):
     with open("qrcode.png", 'rb') as op_img:
-        download = download_button.download_button('Télécharger le qrcode', data = op_img, file_name='YouQRcode.png')
+        download = download_button.download_button('download your qrcode', data = op_img, file_name='YouQRcode.png')
 
         if download:
             st.session_state['download'] = True
+            st.balloons()
 
 
 
