@@ -3,9 +3,9 @@ import streamlit as st
 import os
 import sys
 
-#BASE_DIR = os.path.abspath(os.path.join(__file__, '../../'))
-#sys.path.append(BASE_DIR)
 
+if 'download' not in st.session_state:
+    st.session_state['download'] = False
 
 st.markdown("# QRcode generator app made by Ferhat")
 st.markdown("_Give us an url and we will give you a QRcode you can scan to go to your url_")
